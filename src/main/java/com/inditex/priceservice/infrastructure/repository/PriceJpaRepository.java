@@ -10,5 +10,5 @@ import org.springframework.stereotype.Repository;
 public interface PriceJpaRepository extends JpaRepository<PriceEntity, Long> {
 
     Optional<PriceEntity> findFirstByBrandIdAndProductIdAndStartDateLessThanEqualAndEndDateGreaterThanEqualOrderByPriorityDesc(
-            Integer brandId, Integer productId, LocalDateTime applicationDate, LocalDateTime applicationDate2);
+            Integer brandId, Integer productId, LocalDateTime startDate, LocalDateTime endDate);
 }
